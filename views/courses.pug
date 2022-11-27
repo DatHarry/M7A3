@@ -1,0 +1,115 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(href='https://fonts.googleapis.com/css?family=Lato:300,400,400i,700' rel='stylesheet')
+  link(rel='stylesheet' href='css/style.css')
+  link(rel='shortcut icon' type='image/png' href='img/favicon.png')
+  title  Courses | ListOf Courses
+header.header
+  nav.nav.nav--courses
+    a.nav__el(href='/courses.html') All courses
+    form.nav__search
+      button.nav__search-btn
+        svg
+          use(xlink:href='img/icons.svg#icon-search')
+      input.nav__search-input(type='text' placeholder='Search courses')
+  .header__logo
+    img(src='img/logo.png' alt='Course logo')
+  nav.nav.nav--user
+    a.nav__el(href='#') My Courses
+    button.nav__el Log out
+    a.nav__el(href='#')
+      img.nav__user-img(src='img/user.png' alt='User photo')
+      span
+        | Student
+h3.heading-primary
+  span List Of Courses
+div
+  table.table-header
+    thead
+      tr
+        th(scope='col') #
+        th(scope='col') Course Name
+        th(scope='col') Instructor
+        th(scope='col') Start Date
+        th(scope='col') Description
+    tbody
+      tr.table-secondary
+        th(scope='row') 1
+        td Mark
+        td Otto
+        td @mdo
+        td @mdo
+      tr
+        th(scope='row') 2
+        td Jacob
+        td Thornton
+        td @fat
+        td @mdo
+      tr.table-secondary
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr.table-secondary
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr.table-secondary
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr.table-secondary
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr.table-secondary
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+      tr
+        th(scope='row') 3
+        td(colspan='2') Larry the Bird
+        td @twitter
+        td @mdo
+.footer
+  .footer__logo
+    img(src='img/logo.png' alt='Course logo')
+  ul.footer__nav
+    li
+      a(href='#') About us
+    li
+      a(href='#') Download Course information
+    li
+      a(href='#') Become a Student
+    li
+      a(href='#') Careers
+    li
+      a(href='#') Contact
+  p.footer__copyright
+    | &copy; by Student Learners.

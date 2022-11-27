@@ -1,0 +1,72 @@
+[
+  {
+    "Name": "dxs sthapit",
+    "loanType": "Student",
+    "Amount": "2000",
+    "interestRate": 0.01,
+    "loanTermYears": "11"
+  },
+  {
+    "Name": "Lourdes Browning",
+    "loanType": "Auto",
+    "Amount": "1000",
+    "interestRate": 0.02,
+    "loanTermYears": "12"
+  },
+  {
+    "Name": "Sophie Louise Hart",
+    "loanType": "Student",
+    "Amount": "1000",
+    "interestRate": 0.03,
+    "loanTermYears": "13"
+  },
+  {
+    "Name": "Ayla Cornell",
+    "loanType": "Mortgage",
+    "Amount": "1000",
+    "interestRate": 0.03,
+    "loanTermYears": "14"
+  },
+  {
+    "Name": "Leo Gillespie",
+    "loanType": "Auto",
+    "Amount": "1500",
+    "interestRate": 0.03,
+    "loanTermYears": "15"
+  },
+  {
+    "Name": "Jennifer Hardy",
+    "loanType": "Auto",
+    "Amount": "2500",
+    "interestRate": 0.03,
+    "loanTermYears": "16"
+  },
+  {
+    "Name": "Kate Morrison",
+    "loanType": "Credit",
+    "Amount": "2500",
+    "interestRate": 0.03,
+    "loanTermYears": "10"
+  },
+  {
+    "Name": "Eliana Stout",
+    "loanType": "Credit",
+    "Amount": "1000",
+    "interestRate": 0.03,
+    "loanTermYears": "8"
+  },
+  {
+    "Name": "Cristian Vega",
+    "loanType": "Credit",
+    "Amount": "1000",
+    "interestRate": 0.03,
+    "loanTermYears": "10"
+  },
+  {
+    "Name": "Steve T. Scaife",
+    "loanType": "Mortgage",
+    "Amount": "2500",
+    "interestRate": 0.03,
+    "loanTermYears": "3"
+  }
+]
