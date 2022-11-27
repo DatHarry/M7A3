@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 const loanSchema = new mongoose.Schema(
-{
+  {
     loanType:{
         type: String,
         trim: true,
         enum: ['Home','Auto','Boat','Life'],
     },
-    Name: {
+    name: {
         type: String,
         trim: true
     },
@@ -40,8 +40,11 @@ const loanSchema = new mongoose.Schema(
         select: true
 
     },
-    
+    calculatedLoanAmount: {
+        type: Number
+    },
+
 });
-const Loan = mongoose.model('Loan', loanSchema);
+const Loan = mongoose.model('loans', loanSchema);
 
 module.exports = Loan;

@@ -37,18 +37,18 @@ const createSendToken = (user, statusCode, res) => {
 };
 
 exports.signup = async (req, res, next) => {
-  const {name, email, password, passwordConfirm} = req.body
+  const {name, email, role, password, passwordConfirm} = req.body
   console.log(req.body)
   const newUser = await User.create({
     name,
     email,
+    role,
     password,
     passwordConfirm
   });
   // success : 201 means work with token
   createSendToken(newUser, 201, res);
   console.log(`sign up successfully!`)
-
   req.session.email = newUser.email
   req.session.name = newUser.name
   req.session.userId = newUser._id;
@@ -63,19 +63,23 @@ exports.login = async (req, res, next) => {
   if (!email || !password) {
     return next(new AppError('Please provide email and password!', 400));
   }
+  // authentication
   // 2) Check if user exists && password is correct
   const user = await User.findOne({ email }).select('+password');
 
-  if (!user || !(await user.correctPassword(password, user.password))) { //correctPassword 沒這個東西
+  if (!user || !(await user.correctPassword(password, user.password))) { 
     return next(new AppError('Incorrect email or password', 401));
   }
 
   // 3) If everything ok, send token to client
   createSendToken(user, 200, res);
+  // use session to wrap the user info
   req.session.email = user.email
   req.session.name = user.name
   req.session.userId = user._id;
+  // alert login successfully
   alert("successfully!!!")
+  // redirect to the baseTemplate
   res.redirect('/')
 };
 
@@ -88,7 +92,7 @@ exports.logout = (req, res) => {
 };
 
 exports.protect = async (req, res, next) => {
-  // 1) Getting token and check of it's there
+  // 1) Getting token and check if it's there
   let token;
   if (
     req.headers.authorization &&

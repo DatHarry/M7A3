@@ -55,7 +55,7 @@ userSchema.pre('save', async function(next){
   }
   // if new and modified
 
-  this.password = await bcrypt.hash(this.password, 12); // how intensive the CPU will be
+  this.password = await this.password; // how intensive the CPU will be
   this.passwordConfirm = undefined; // we do not want to store in database
   next();
 });
